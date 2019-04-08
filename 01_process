@@ -1,0 +1,12 @@
+# change directory to that above the 01_raw_data directory and above a 01_filtered_data directory
+# uses bbduk to quality trim data
+
+for i in $( ls 01_raw_data ); do
+j=${i%R1.fastq.gz}R2.fastq.gz;
+/lustre/work/jmanthey/bbmap/bbduk.sh in1=/lustre/scratch/jmanthey/11_transcriptomes/01_raw_data/$i \
+in2=/lustre/scratch/jmanthey/11_transcriptomes/01_raw_data/$j \
+out1=/lustre/scratch/jmanthey/11_transcriptomes/01_filtered_data/$i \
+out2=/lustre/scratch/jmanthey/11_transcriptomes/01_filtered_data/$j \
+minlen=40 qtrim=rl trimq=10 ktrim=r k=25 mink=7 trimpolya=5 ref=/lustre/work/jmanthey/bbmap/resources/adapters.fa \
+hdist=1 tbo tpe;
+done
