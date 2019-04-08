@@ -1,6 +1,9 @@
 # change directory to that above the 01_raw_data directory and above a 01_filtered_data directory
 # uses bbduk to quality trim data
 
+# run on a qlogin compute node
+# save info printed to screen in a log file
+
 for i in $( ls 01_raw_data ); do
 j=${i%R1.fastq.gz}R2.fastq.gz;
 /lustre/work/jmanthey/bbmap/bbduk.sh in1=/lustre/scratch/jmanthey/11_transcriptomes/01_raw_data/$i \
