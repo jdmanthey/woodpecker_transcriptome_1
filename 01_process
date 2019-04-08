@@ -4,7 +4,8 @@
 # run on a qlogin compute node
 # save info printed to screen in a log file
 
-for i in $( ls 01_raw_data ); do
+for b in $( ls 01_raw_data/*R1.fastq.gz ); do
+i=$(basename $b);
 j=${i%R1.fastq.gz}R2.fastq.gz;
 /lustre/work/jmanthey/bbmap/bbduk.sh in1=/lustre/scratch/jmanthey/11_transcriptomes/01_raw_data/$i \
 in2=/lustre/scratch/jmanthey/11_transcriptomes/01_raw_data/$j \
@@ -13,3 +14,4 @@ out2=/lustre/scratch/jmanthey/11_transcriptomes/01_filtered_data/$j \
 minlen=40 qtrim=rl trimq=10 ktrim=r k=25 mink=7 trimpolya=5 ref=/lustre/work/jmanthey/bbmap/resources/adapters.fa \
 hdist=1 tbo tpe;
 done
+
