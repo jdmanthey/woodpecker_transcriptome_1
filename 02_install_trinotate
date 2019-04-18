@@ -1,0 +1,36 @@
+# testing to see if i can install trinotate and all the required dependencies, etc. 
+
+conda install -c bioconda trinotate
+
+# download transcoder from https://github.com/TransDecoder/TransDecoder/wiki
+# copy the zipped file to the cluster and unzip
+# add the transcoder directory to .bashrc file path
+
+# some of below were already installed but this also double-checks
+# install sqlite 
+conda install -c conda-forge sqlite
+
+#install hmmer
+conda install -c bioconda hmmer
+
+# install blast
+conda install -c bioconda blast
+
+# download signalp http://www.cbs.dtu.dk/cgi-bin/nph-sw_request?signalp
+# add the location of the bin directory of the signal p to the .bashrc file path
+# make sure the scripts are executable
+
+# download tmhmm from http://www.cbs.dtu.dk/cgi-bin/nph-sw_request?tmhmm
+# read the readme in the directory and modify the two files' top lines as suggested to your working
+# version of perl, e.g., #!/home/jmanthey/anaconda2/bin/perl
+# add the location of the bin directory of tmhmm to the .bashrc file path
+# make sure the scripts are executable
+
+# download and process the necessary references
+# in transcriptomes directory, make a trinotate working directory
+mkdir 03_trinotate
+cd 03_trinotate
+Build_Trinotate_Boilerplate_SQLite_db.pl Trinotate
+makeblastdb -in uniprot_sprot.pep -dbtype prot
+gunzip Pfam-A.hmm.gz
+hmmpress Pfam-A.hmm
