@@ -13,5 +13,5 @@
 
  Trinity --seqType fq --max_memory 192G \ 
  --left /lustre/scratch/jmanthey/11_transcriptomes/01_filtered_data/D_pileatus_G_LHD1282_R1.fastq.gz \
- --right /lustre/scratch/jmanthey/11_transcriptomes/01_filtered_data/D_pileatus_G_LHD1282_R1.fastq.gz \
+ --right /lustre/scratch/jmanthey/11_transcriptomes/01_filtered_data/D_pileatus_G_LHD1282_R2.fastq.gz \
  --CPU 24 --output pileatus_g_trinity1
