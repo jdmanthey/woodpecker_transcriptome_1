@@ -1,0 +1,22 @@
+cd /lustre/scratch/jmanthey/11_transcriptomes/
+mkdir 02b_assemblies_fasta
+cd 02b_assemblies_fasta
+cp ../02_assemblies/pileatus_l_trinity2/Trinity.fasta ./pileatus_l_trinity2.fasta
+cp ../02_assemblies/pileatus_l_trinity1/Trinity.fasta ./pileatus_l_trinity1.fasta
+cp ../02_assemblies/pileatus_l_spades/soft_filtered_transcripts.fasta ./pileatus_l_spades_soft.fasta
+cp ../02_assemblies/pileatus_l_spades/hard_filtered_transcripts.fasta ./pileatus_l_spades_hard.fasta
+
+cp ../02_assemblies/pileatus_g_trinity2/Trinity.fasta ./pileatus_g_trinity2.fasta
+cp ../02_assemblies/pileatus_g_trinity1/Trinity.fasta ./pileatus_g_trinity1.fasta
+cp ../02_assemblies/pileatus_g_spades/soft_filtered_transcripts.fasta ./pileatus_g_spades_soft.fasta
+cp ../02_assemblies/pileatus_g_spades/hard_filtered_transcripts.fasta ./pileatus_g_spades_hard.fasta
+
+cp ../02_assemblies/dryobates_g_trinity2/Trinity.fasta ./dryobates_g_trinity2.fasta
+cp ../02_assemblies/dryobates_g_trinity1/Trinity.fasta ./dryobates_g_trinity1.fasta
+cp ../02_assemblies/dryobates_g_spades/soft_filtered_transcripts.fasta ./dryobates_g_spades_soft.fasta
+cp ../02_assemblies/dryobates_g_spades/hard_filtered_transcripts.fasta ./dryobates_g_spades_hard.fasta
+
+cp ../02_assemblies/dryobates_l_trinity2/Trinity.fasta ./dryobates_l_trinity2.fasta
+cp ../02_assemblies/dryobates_l_trinity1/Trinity.fasta ./dryobates_l_trinity1.fasta
+cp ../02_assemblies/dryobates_l_spades/soft_filtered_transcripts.fasta ./dryobates_l_spades_soft.fasta
+cp ../02_assemblies/dryobates_l_spades/hard_filtered_transcripts.fasta ./dryobates_l_spades_hard.fasta
